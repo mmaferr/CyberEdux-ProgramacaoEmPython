@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&family=Sarala&display=swap');
+
+        body {
+            background: linear-gradient(90deg, rgba(255, 0, 0, 0.596) 0%, rgba(255, 153, 0, 0.562) 10%, rgba(210, 222, 33, 0.61) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47, 202, 226, 0.507) 50%, rgba(28,127,238,1) 60%, rgba(95, 21, 242, 0.404) 70%, rgba(185, 12, 248, 0.61) 80%, rgba(251, 7, 218, 0.521) 90%, rgba(255, 0, 0, 0.527) 100%);        
+            margin: 0;
+
+        }
+
+        .site {
+            background-color: rgb(177, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            color: aliceblue;
+            padding: 10px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        button {
+            margin-left: 550px;        }
+
+        .usuario1, .usuario3 {
+            background-color: rgba(247, 236, 236, 0.493);
+            border-radius: 10px;
+            border-style:solid;
+            border-color: rgba(0, 0, 0, 0.589);
+            height: 300px;
+            width: 800px;
+            margin: 30px;
+            margin-left: 300px;
+        }
+
+        .usuario2 {
+            background-color: rgba(247, 236, 236, 0.493);
+            border-radius: 10px;
+            border-style:solid;
+            border-color: rgba(0, 0, 0, 0.589);
+            height: 490px;
+            width: 800px;
+            margin: 30px;
+            margin-left: 300px;
+        }
+
+        .usuario4 {
+            background-color: rgba(247, 236, 236, 0.493);
+            border-radius: 10px;
+            border-style:solid;
+            border-color: rgba(0, 0, 0, 0.589);
+            height: 490px;
+            width: 800px;
+            margin: 30px;
+            margin-left: 300px;
+        }
+
+        .usuario-nome-foto {
+            gap: 12px;
+            display: flex;
+            align-items: center;         
+        }        
+
+        .sherek {
+            border-radius: 30px;
+            border-style:solid;
+            border-color: rgb(124, 8, 8);
+            margin: 10px;
+        }
+
+        p {
+            margin: 15px;
+        }
+
+        .reagir {
+            margin: 10px;
+        }
+
+        .panic {
+            height: 200px;
+            margin-left: 15px;
+        }
+
+
+        button {
+        display: block; /* Isso faz o botão ocupar toda a largura disponível */
+        margin-top: 10px; /* Define o espaçamento entre os títulos e o botão */
+        padding: 10px 20px; /* Define o preenchimento interno do botão */
+        background-color: #60564D; /* Cor de fundo do botão */
+        color: #fff; /* Cor do texto do botão */
+        border: none; /* Remove a borda do botão */
+        border-radius: 25px; /* Adiciona cantos arredondados ao botão */
+        cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+        font-size: 20px;
+        font-family: 'Schoolbell', cursive;
+    }
+
+
+        button:hover {
+            transform: scale(1.2); /* Aumenta o botão em 10% quando o mouse passa por cima */
+        }
+
+    .caixa-login {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.815);
+        z-index: 1;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .fechar {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+        cursor: pointer;
+        color: #FDF6D8;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+        color: white;
+    }
+
+    input {
+        border: 1px solid #050000; /* Borda de 1 pixel sólido cinza */
+        margin: 10px 0; /* Margem superior e inferior de 10 pixels */
+        padding: 5px; /* Espaçamento interno de 5 pixels */
+        border-radius: 5px; /* Cantos arredondados */
+        font-size: 16px; /* Tamanho da fonte em pixels */
+        border: 1px solid #0077FF; /* Borda azul quando em foco */
+        background-color: #f9f9f9; /* Cor de fundo diferente em foco */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="site">Fofoca das Divas
+</div>
+        <script src="solicitar.js"></script>
+            <button onclick="mostrarCaixaLogin()">COMECE A EXPLORAR</button>
+        </div>
+        <div id="caixa-login" class="caixa-login">
+            <span id="fechar" class="fechar" onclick="fecharCaixaLogin()">&times;</span>
+            <h2>Bem vindo Sherek!</h2>
+            <form>
+                <label for="nome" class="labelInput">Nome completo</label>
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <br>
+                <label for="email" class="labelInput">Email</label>
+                <input type="text" name="email" id="email" class="inputUser" required>
+                <br>
+                <label for="username">Nome de usuário:</label>
+                <input type="text" id="username" name="username" required>    
+                <br>               
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </div>
+        
+        
+    </header>
+    <div class="usuario1">
+        <div class="usuario-nome-foto">
+            <img class="sherek" src="https://th.bing.com/th/id/R.12821aef23d6a0615e08d056bf5018e1?rik=sYXjh%2b9TfYGh%2fg&pid=ImgRaw&r=0" height="60px">
+            <h3>sherek_mandrake</h3>
+        </div>   
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+       <div class="reagir">
+        <img src="curtir.png" height="40px">
+        <img src="mensagem.png" height="40px">
+        <img src="compartilhar.png" height="40px">
+    </div>
+    </div>
+      
+    <div class="usuario2">
+        <div class="usuario-nome-foto">
+            <img class="sherek" src="https://th.bing.com/th/id/OIP.oanA4-TJnwRM81tachOkSQAAAA?rs=1&pid=ImgDetMain" height="60px">
+            <h3>sherek_chocado</h3>
+        </div>   
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+       <img class="panic" src="https://media1.giphy.com/media/q2D5lSYzwnP4LbSPhF/giphy.gif" alt="">
+
+       <div class="reagir">
+            <img src="curtir.png" height="40px">
+            <img src="mensagem.png" height="40px">
+            <img src="compartilhar.png" height="40px">
+        </div>
+    </div>
+
+    <div class="usuario3">
+        <div class="usuario-nome-foto">
+            <img class="sherek" src="https://i.pinimg.com/originals/74/bd/85/74bd850f9f1766713c9474c27665fb43.jpg" height="60px">
+            <h3>sherek_feio</h3>
+        </div>   
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="reagir">
+            <img src="curtir.png" height="40px">
+            <img src="mensagem.png" height="40px">
+            <img src="compartilhar.png" height="40px">
+        </div>
+    </div>
+
+    <div class="usuario4">
+        <div class="usuario-nome-foto">
+            <img class="sherek" src="https://th.bing.com/th/id/OIP.dB7CjjRixAO-W7OYk9_ogAHaHK?w=860&h=832&rs=1&pid=ImgDetMain" height="60px">
+            <h3>sherek_nicolas_cage</h3>
+        </div>   
+       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <img class="panic" src="https://i.pinimg.com/originals/95/70/e9/9570e9e17b7a70d3484f2d0c752318b9.gif">
+       ]<div class="reagir">
+            <img src="curtir.png" height="40px">
+            <img src="mensagem.png" height="40px">
+            <img src="compartilhar.png" height="40px">
+        </div>
+    </div>
+
+
+</body>
+</html>
