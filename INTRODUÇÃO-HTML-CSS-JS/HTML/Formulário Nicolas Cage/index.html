@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18/01/2024</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&family=Sarala&display=swap');
+        body {
+            background: url(https://th.bing.com/th/id/OIP.dcqbCHvRL_hFHzRMLibiiwHaEo?rs=1&pid=ImgDetMain);
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.61);
+            border-radius: 20px;
+            color: white;
+            width: 400px;
+            height: 400px;
+            text-align: center;        
+        }
+
+        input{
+            border-radius: 40px;
+            font-size: 15px;
+        }
+
+        button{
+            background-color: dodgerblue;
+            border-style: solid;
+            border-color: aliceblue;
+            width: 170px;
+            height: 40px;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+}
+        button:hover{
+            background-color: deepskyblue;
+        }
+
+    </style>
+</head>
+
+    <form method="dialog">
+        <h1>FORMULÁRIO</h1>
+        <label for="myinput">
+            Nome:
+            <input type="text" name="myinput">
+        <br>
+        <br>
+        </label>
+        <label>
+            Sobrenome:
+            <input type="text" name="sobrenome">
+        </label>
+        <br>
+        <br>
+        <label>
+            Data de Nascimento:
+            <input type="date">
+        </label>
+        <br>
+        <br>
+        <label>
+            Email:
+            <input type="email">
+        </label>
+        <br>
+        <br>
+        <label>
+            Telefone:
+            <input type="text">
+        </label>
+        <br>
+        <br>
+        <label>
+            Cidade:
+            <input type="text">
+        </label>
+        <br>
+        <br>
+        <button>Cadastrar</button>
+        <button type="reset">Limpar</button>
+</body>
+</html>
