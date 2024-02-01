@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 def feed(request):
     context = {
@@ -16,4 +17,6 @@ def publicate(request):
         content = request.POST.get("content")
         print(author)
         print(content)
-    return render(request, 'publicate.html')
+        return HttpResponseRedirect('/feed')
+    else:
+        return render(request, 'publicate.html')
