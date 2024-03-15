@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- <meta>: É uma tag HTML usada para fornecer metadados sobre o documento HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <title>Aprenda Programação com YumiCode</title>
+    
+
+    <!-- Essa é a descrição que aparece quando o usuário vizualiza o site pelo google -->
+    <meta name="description" content="Aprenda programação YumiCode, aqui nós apoiamos blabla e sabe o que lá">
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Lovelace</span>
+            <ul class="menu">
+                <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'linguagens' %}">Linguagens</a></li>
+                <li><a href="{% url 'cursos' %}">Cursos em alta</a></li>
+            </ul>
+            <ul class="menu menu-login">
+                <li><a class="login" href="{% url 'login' %}">Login</a></li>
+                <button class="menu-button"><a href="{% url 'cadastrar' %}">Increva-se</a></button>
+            </ul>
+            
+        </nav>  
+    </header>
+    
+    <main>
+        <div class="principal">
+            <section class="hero">
+                
+                <header class="hero-conteudo">
+                    <div class="hero-cabecalho">
+                        <h1 class="hero-titulo">Estude na melhor faculdade de programação</h1>
+                        <p class="hero-p">Pão é um alimento obtido pelo cozimento de uma massa alimentar de consistência elástica, elaborada basicamente com farinha de cereal, água, sal/açúcar. A evidência de ocorrência mais antiga de pão é na</p>
+                    </div> 
+                    <div class="hero-button">
+                        <button class="button-cadastre-se"><a href="{% url 'cadastrar' %}">inscreva-se</a></button>
+                        <button class="button-saiba-mais">Saiba mais</button>
+                    </div>      
+                        
+                
+                </header>
+                <div class="hero-imagens-container">
+                    <img src="{% static 'img/lovelace3.png' %}" class="hero-image" alt="Imagem de destaque">                </div> 
+            </section>           
+        </div>
+        <section class="avaliacoes">
+            <header class="avaliacoes-cabecalho">
+                <h2 class="cabecalho-titulo">junte-se a mais de 25 milhões de alunos e comece uma carreira  de sucesso</h2>
+            </header>
+            <div class="avaliacoes-card-container">
+                <div class="avaliacoes-card">
+                    <header class="avaliacoes-card-autor">
+                        <div class="avaliacoes-card-autor-detalhes">
+                            <h3 class="avaliacao-nome">Maria</h3>
+                            <img src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-como-a-presenca-da-mulher-pode-ser-harmonia-no-mundo.jpg" alt="">
+                        </div>                      
+                    </header>
+                    <p class="avaliacao-descricao">"Mimo's learning path provided a stable, sustainable pace for several months of constant progress."</p>
+                    <div class="avaliacao-profissao">
+                        <span class="avaliacao-autor-profissao">Front End Developer</span>
+                    </div>
+                </div>
+
+                <div class="avaliacoes-card">
+                    <header class="avaliacoes-card-autor">
+                        <div class="avaliacoes-card-autor-detalhes">
+                            <h3 class="avaliacao-nome">Filipe</h3>
+                            <img src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-como-a-presenca-da-mulher-pode-ser-harmonia-no-mundo.jpg" alt="">
+                        </div>                      
+                    </header>
+                    <p class="avaliacao-descricao">"Mimo's learning path provided a stable, sustainable pace for several months of constant progress."</p>
+                    <div class="avaliacao-profissao">
+                        <span class="avaliacao-autor-profissao">Front End Developer</span>
+                    </div>
+                </div>
+
+                <div class="avaliacoes-card">
+                    <header class="avaliacoes-card-autor">
+                        <div class="avaliacoes-card-autor-detalhes">
+                            <h3 class="avaliacao-nome">Taylor S.</h3>
+                            <img src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-como-a-presenca-da-mulher-pode-ser-harmonia-no-mundo.jpg" alt="">
+                        </div>                      
+                    </header>
+                    <p class="avaliacao-descricao">"Mimo's learning path provided a stable, sustainable pace for several months of constant progress."</p>
+                    <div class="avaliacao-profissao">
+                        <span class="avaliacao-autor-profissao">Front End Developer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>

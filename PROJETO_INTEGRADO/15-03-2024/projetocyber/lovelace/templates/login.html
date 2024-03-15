@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Login no Lovelace</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="logo"><a href="{% url 'home' %}">Lovelace</a></span>
+        </nav>      
+    </header>
+    <div class="hero">
+        <h2>Bem vinda(o) de volta!</h2>
+        <form class="hero-cadastro" method="POST">
+            {% csrf_token %}
+           <div class="hero-input">
+                <input type="email" name="email" placeholder="Seu email">
+                <input type="password" name="senha" placeholder="Sua senha">
+            </div>
+            {% if login_incorreto %}
+                Credenciais incorretas!
+            {% endif %}
+            <button class="hero-button">Entrar</button>
+            <p>Não tem uma conta? <a href="#"> Criar uma conta</a></p>
+        </form>
+    </div>        
+</body>
+</html>

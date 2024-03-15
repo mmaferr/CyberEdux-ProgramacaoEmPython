@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cadastrar.css' %}">
+    <title>Cadastrar no Lovelace</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="logo"><a href="{% url 'home' %}">Lovelace</a></span>
+        </nav>      
+    </header>
+    <div class="hero">
+        <h2>Comece hoje a estudar programação!</h2>
+        <form class="hero-cadastro">
+            <div class="hero-input">
+                <input name="email" type="email" placeholder="Seu email">
+                <input name="senha" type="password" placeholder="Sua senha">
+            </div>
+            <button type="submit" class="hero-button">Entrar</button>
+            <p>Não tem uma conta? <a href="#"> Criar uma conta</a></p>
+        </form>
+    </div>        
+</body>
+</html>
