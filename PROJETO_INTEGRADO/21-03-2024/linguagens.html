@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- <meta>: É uma tag HTML usada para fornecer metadados sobre o documento HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/linguagens.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+    <script src="{% static 'js/linguagens.js' %}"></script>
+    <title>Linguagens</title>
+    
+
+    <!-- Essa é a descrição que aparece quando o usuário vizualiza o site pelo google -->
+    <meta name="description" content="Aprenda programação YumiCode, aqui nós apoiamos blabla e sabe o que lá">
+</head>
+<body>
+    {% include 'nav-home-page.html' %}
+    <main></main>
+
+</body>
+</html>
